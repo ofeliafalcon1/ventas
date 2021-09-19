@@ -19,7 +19,7 @@ namespace Ventas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hola Mundo :)");
+            MessageBox.Show("Hola Mundo :): Piensa con que vas a lograrlo, aunque ya hayas fallado porque el éxito está al otro lado del fracaso");
         }
     }
 }
