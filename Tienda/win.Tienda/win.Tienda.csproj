@@ -125,6 +125,12 @@
   <ItemGroup>
     <None Include="Resources\Logotipo Superminimalista con flor y Texto Curvo en fondo beis.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLTienda\BLTienda.csproj">
+      <Project>{80abb2ba-d8d3-493f-90a8-0405b0415cd1}</Project>
+      <Name>BLTienda</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
