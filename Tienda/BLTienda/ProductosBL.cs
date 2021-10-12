@@ -10,7 +10,7 @@ namespace BLTienda
     public class ProductosBL
     {
         /*Creacion de Lista Binding (arreglo) para los productos*/
-        BindingList<Producto> ListaProductos;
+       public BindingList<Producto> ListaProductos { get; set; }
 
         public ProductosBL()
         {
@@ -52,11 +52,11 @@ namespace BLTienda
 
             //Producto4 
             var Producto4 = new Producto();
-            Producto1.ID = 4;
-            Producto1.Descripcion = "Calcetines";
-            Producto1.Precio = 95;
-            Producto1.Existencia = 20;
-            Producto1.Activo = true;
+            Producto4.ID = 4;
+            Producto4.Descripcion = "Calcetines";
+            Producto4.Precio = 95;
+            Producto4.Existencia = 20;
+            Producto4.Activo = true;
 
             ListaProductos.Add(Producto4);
 
