@@ -14,7 +14,7 @@ namespace BLTienda
 
         public ProductosBL()
         {
-            /*Instanciamos la lista en nuestro inicializador*/
+            /*Instanciamos la lista*/
             ListaProductos = new BindingList<Producto>();
 
             /*Instanciamos productos en la lista y colocamos todos 
