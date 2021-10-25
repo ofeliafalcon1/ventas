@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,61 +10,27 @@ namespace BLTienda
 {
     public class ProductosBL
     {
+        Contexto _contexto;//Declaramos variable contexto
+
         /*Creacion de Lista Binding (arreglo) para los productos*/
        public BindingList<Producto> ListaProductos { get; set; }
 
         public ProductosBL()
         {
+            _contexto = new Contexto();//Instanciamos el contexto en el constructor
+
             /*Instanciamos la lista*/
             ListaProductos = new BindingList<Producto>();
 
-            /*Instanciamos productos en la lista y colocamos todos 
-             los datos del producto en sus propiedades.*/
+            /****Se han eliminado los datos de preuba****/
              
-            //Producto1
-            var Producto1 = new Producto();
-            Producto1.ID = 1;
-            Producto1.Descripcion = "Camisetas";
-            Producto1. Precio = 65;
-            Producto1.Existencia = 100;
-            Producto1.Activo = true;
-
-            ListaProductos.Add(Producto1);
-
-            //Producto2
-            var Producto2 = new Producto();
-            Producto2.ID = 2;
-            Producto2.Descripcion = "Vestidos";
-            Producto2.Precio = 1500;
-            Producto2.Existencia = 15;
-            Producto2.Activo = true;
-
-            ListaProductos.Add(Producto2);
-
-            //Producto3
-            var Producto3 = new Producto();
-            Producto3.ID = 3;
-            Producto3.Descripcion = "Jeans";
-            Producto3.Precio = 600;
-            Producto3.Existencia = 50;
-            Producto3.Activo = true;
-
-            ListaProductos.Add(Producto3);
-
-            //Producto4 
-            var Producto4 = new Producto();
-            Producto4.ID = 4;
-            Producto4.Descripcion = "Calcetines";
-            Producto4.Precio = 95;
-            Producto4.Existencia = 20;
-            Producto4.Activo = true;
-
-            ListaProductos.Add(Producto4);
-
         /*Obtencion de Productos*/
         }
         public BindingList<Producto> ObtenerProductos()
         {
+            _contexto.Productos.Load();//Cargando datos a la tabla
+            ListaProductos = _contexto.Productos.Local.ToBindingList();//Llenar la lista
+
             return ListaProductos;
         }
 
@@ -93,7 +60,7 @@ namespace BLTienda
             ListaProductos.Add(nuevoProducto);
         }   
 
-        //Creamos la clase para eliminar un producto
+        /*Creamos la clase para eliminar un producto YA*/
         public bool EliminarProducto(int id)
         {
             foreach (var producto in ListaProductos) //Foreach es una funcion que recorre listas de objetos
@@ -147,7 +114,7 @@ namespace BLTienda
         public bool Activo { get; set; }
       }
 
-    //Creamos una clase nueva que tendra un resultado exitoso o un mensaje
+    /*Creamos una clase nueva que tendra un resultado exitoso o un mensaje YA*/
     public class Resultado
     {
         public bool Exitoso { get; set; }
