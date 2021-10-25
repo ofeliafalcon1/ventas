@@ -37,6 +37,7 @@ namespace win.Tienda
             {
                 listaProductosBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
+                MessageBox.Show("Registro guardado correctamente :)");//Mensaje cuando guardas registro de  producto
             }
             else
             {

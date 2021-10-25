@@ -15,6 +15,7 @@ namespace BLTienda
         /*Creacion de Lista Binding (arreglo) para los productos*/
        public BindingList<Producto> ListaProductos { get; set; }
 
+
         public ProductosBL()
         {
             _contexto = new Contexto();//Instanciamos el contexto en el constructor
@@ -22,7 +23,7 @@ namespace BLTienda
             /*Instanciamos la lista*/
             ListaProductos = new BindingList<Producto>();
 
-            /****Se han eliminado los datos de preuba****/
+            /****Se han eliminado los datos de prueba****/
              
         /*Obtencion de Productos*/
         }
@@ -44,11 +45,8 @@ namespace BLTienda
                 return resultado;
             }
 
-            if (producto.ID == 0)
-            {
-                /*Funcion max se encarga de buscar  todos los productos y calcula el maximo id que encuentra*/
-                producto.ID = ListaProductos.Max(item => item.ID) + 1;
-            }
+            _contexto.SaveChanges(); //Agregando la clase contexto de nuestra base de datos y guardar cambios
+
             resultado.Exitoso = true;
             return resultado;
         }
@@ -68,6 +66,7 @@ namespace BLTienda
                 if (producto.ID == id)
                 {
                     ListaProductos.Remove(producto);
+                    _contexto.SaveChanges();//Se guardan los cambios para la base de datos contexto
                     return true;
                 }
             }
