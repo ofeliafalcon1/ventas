@@ -25,6 +25,8 @@ namespace win.Tienda
             listaProductosBindingSource.DataSource = _productos.ObtenerProductos();//Enlaza y retorna a ProductosBL
         }
 
+        /*Tercer avance Yorlani Alva*/
+        //Creando la función guardar
         private void listaProductosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             listaProductosBindingSource.EndEdit();//Funcion para editar el nombre del nuevo producto
@@ -42,6 +44,7 @@ namespace win.Tienda
             }
         }
 
+        //Agregamos un método
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
             _productos.AgregarProducto();
@@ -68,10 +71,16 @@ namespace win.Tienda
         //conversión de entero
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
+            //estructura de confirmacion de sí o no para eliminar un registro
             if (iDTextBox.Text != "")
             {
-                var id = Convert.ToInt32(iDTextBox.Text);
-                Eliminar(id);
+                var resultado = MessageBox.Show("¿Desea eliminar este registo?", "Eliminar", MessageBoxButtons.YesNo);
+
+                if (resultado == DialogResult.Yes)
+                {
+                    var id = Convert.ToInt32(iDTextBox.Text);
+                    Eliminar(id);
+                }
             }
         }
 
