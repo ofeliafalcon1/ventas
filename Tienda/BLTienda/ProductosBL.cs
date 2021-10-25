@@ -67,8 +67,77 @@ namespace BLTienda
             return ListaProductos;
         }
 
-        /*Propiedades de los productos*/
-      }
+        /*Creacion de una clase para guardar los productos, el cual se recibira un producto con parametro YA*/
+
+        public Resultado GuardarProducto(Producto producto)
+        {
+            var resultado = Validar(producto);
+            if (resultado.Exitoso == false)
+            {
+                return resultado;
+            }
+
+            if (producto.ID == 0)
+            {
+                /*Funcion max se encarga de buscar  todos los productos y calcula el maximo id que encuentra*/
+                producto.ID = ListaProductos.Max(item => item.ID) + 1;
+            }
+            resultado.Exitoso = true;
+            return resultado;
+        }
+
+        //Agregamos producto BL en una clase
+        public void AgregarProducto()
+        {
+            var nuevoProducto = new Producto();
+            ListaProductos.Add(nuevoProducto);
+        }   
+
+        //Creamos la clase para eliminar un producto
+        public bool EliminarProducto(int id)
+        {
+            foreach (var producto in ListaProductos) //Foreach es una funcion que recorre listas de objetos
+            {
+                if (producto.ID == id)
+                {
+                    ListaProductos.Remove(producto);
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        /* Creamos un metodo de tipo privado de resultado que se encargara de validar un producto*/
+        private Resultado Validar(Producto producto)
+        {
+            var resultado = new Resultado();
+            resultado.Exitoso = true;
+
+            if (string.IsNullOrEmpty(producto.Descripcion) == true)
+            {
+             resultado.Mensaje = "Ingrese una descripcion";
+             resultado.Exitoso = false;
+            }
+
+            if (producto.Existencia < 0)
+            {
+             resultado.Mensaje = "La existencia debe ser mayor a cero";
+            resultado.Exitoso = false;
+            }
+            
+           if (producto.Precio < 0)
+            {
+             resultado.Mensaje = "El precio debe ser mayor a cero";
+             resultado.Exitoso = false;
+            }
+
+        return resultado;
+
+        }
+    }
+
+    /*Propiedades de los productos*/
     public class Producto
     {
         public int ID { get; set; }
@@ -77,5 +146,13 @@ namespace BLTienda
         public int Existencia { get; set; }
         public bool Activo { get; set; }
       }
+
+    //Creamos una clase nueva que tendra un resultado exitoso o un mensaje
+    public class Resultado
+    {
+        public bool Exitoso { get; set; }
+        public string Mensaje { get; set; }
+    }
    }
+
     

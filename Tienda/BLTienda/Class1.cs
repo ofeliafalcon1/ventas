@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace BLTienda
 {
     public class SeguridadBL
     {
         public bool Autorizar(string usuario, string contrasena)
         {
-            if (usuario == "admin1" && contrasena == "123")
+            if (usuario == "Admin1" && contrasena == "123")
             {
                 return true;
             }
