@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BLTienda
 {
@@ -111,7 +106,8 @@ namespace BLTienda
         public double Precio { get; set; }
         public int Existencia { get; set; }
         public bool Activo { get; set; }
-      }
+        public byte[] Foto { get; set; } /*Parte 6: Agregando una foto a las propiedades de los productos*/
+    }
 
     /*Creamos una clase nueva que tendra un resultado exitoso o un mensaje YA*/
     public class Resultado

@@ -3,7 +3,7 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace BLTienda
 {
-    public class Contexto: DbContext //Heredando clases para que DbContext tenga acceso a la base de datos
+    public class Contexto: DbContext //Heredando clases para que DbContext (otra clase) tenga acceso a la base de datos
     {
         public Contexto(): base("Camisetas") //Instanciando la clase base de DbContext
         {
@@ -16,6 +16,6 @@ namespace BLTienda
         }
 
 
-        public DbSet<Producto> Productos { get; set; }//DbSet es una lista de base de datos
+        public DbSet<Producto> Productos { get; set; }//DbSet es una lista de base de datos y Productos es la tabla
     }
 }

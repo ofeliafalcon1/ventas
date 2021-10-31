@@ -1,12 +1,7 @@
 ﻿using BLTienda;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace win.Tienda
@@ -31,6 +26,18 @@ namespace win.Tienda
         {
             listaProductosBindingSource.EndEdit();//Funcion para editar el nombre del nuevo producto
             var producto = (Producto)listaProductosBindingSource.Current;
+
+            //Parte6 para guardar la foto en los registros
+            if (fotoPictureBox.Image != null)
+            {
+                producto.Foto = Program.imageToByteArray(fotoPictureBox.Image);//Instanciando clase Program y convirtiendo la imagen a un arreglo de tipo byte
+            }
+            else
+            {
+                producto.Foto = null;
+            }
+
+
             var resultado = _productos.GuardarProducto(producto);
 
             if (resultado.Exitoso == true)
@@ -104,6 +111,35 @@ namespace win.Tienda
         {
             DeshabilitarHabilitarBotones(true);
             Eliminar(0);
+        }
+
+        private void button1_Click(object sender, EventArgs e)/*Configuracion del boton "Agregar Foto"*/
+        {
+            var producto = (Producto)listaProductosBindingSource.Current;//Parte 6
+
+            if (producto != null)
+            {
+                openFileDialog1.ShowDialog();
+                var archivo = openFileDialog1.FileName;
+
+                if (archivo != "")
+                {
+                    var fileInfo = new FileInfo(archivo);//FileInfo permite obtener la informacion del archivo (archivo) es la ruta
+                    var fileStream = fileInfo.OpenRead();//FileSteam es ver y leer un archivo por partes
+
+                    fotoPictureBox.Image = Image.FromStream(fileStream);//asignando el archivo a la caja de imagen del formulario
+                }
+                else
+                {
+                    MessageBox.Show("Antes de agregar una imagen necesita crear un nuevo producto.");
+                }
+            }
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)/*Configuracion para el botón "Remover foto"*/
+        {
+            fotoPictureBox.Image = null; //La imagen en la caja del formulario se anula
         }
     }
 }
