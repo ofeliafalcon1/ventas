@@ -14,6 +14,9 @@ namespace win.Tienda
     public partial class FrmLogin : Form
     {
         SeguridadBL _seguridad;
+
+        public object Application { get; private set; }
+
         public FrmLogin()
         {
             InitializeComponent();
@@ -22,7 +25,7 @@ namespace win.Tienda
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -37,6 +40,10 @@ namespace win.Tienda
 
             usuario = textBox1.Text;
             contrasena = textBox2.Text;
+
+            button1.Enabled = false;
+            button1.Text = "Verificando. . .";
+            Application.DoEvents();
 
             var resultado = _seguridad.Autorizar(usuario, contrasena);
 

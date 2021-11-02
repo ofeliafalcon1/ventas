@@ -53,7 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoriasBL.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="SeguridadBL.cs" />
     <Compile Include="Contexto.cs" />
     <Compile Include="DatosDeInicio.cs" />
     <Compile Include="ProductosBL.cs" />

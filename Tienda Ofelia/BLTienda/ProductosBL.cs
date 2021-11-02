@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Data.Entity;
+using static BLTienda.CategoriasBL;
 
 namespace BLTienda
 {
