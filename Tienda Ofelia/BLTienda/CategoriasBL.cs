@@ -16,7 +16,7 @@ namespace BLTienda
             ListaCategorias = new BindingList<Categoria>();
         }
 
-        public BindingList<Categoria> ObetenerCategorias()
+        public BindingList<Categoria> ObtenerCategorias()
         {
             _contexto.Categorias.Load();
             ListaCategorias = _contexto.Categorias.Local.ToBindingList();

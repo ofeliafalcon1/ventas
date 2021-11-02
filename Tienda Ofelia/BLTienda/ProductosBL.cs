@@ -105,8 +105,10 @@ namespace BLTienda
         public string Descripcion { get; set; }
         public double Precio { get; set; }
         public int Existencia { get; set; }
-        public int CategoriaId { get; set; }
-        public CategoriasBL Categoria { get; set; }
+        public int CategoriaId { get; set; }//Campo foráneo
+        public Categoria Categoria { get; set;}//relacionando datos de tabla categorias a productosbl
+        public int TipoId { get; set; }
+        public Tipo Tipo { get; set; }
         public bool Activo { get; set; }
         public byte[] Foto { get; set; } /*Parte 6: Agregando una foto a las propiedades de los productos*/
 
