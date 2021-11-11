@@ -87,7 +87,7 @@ namespace Win.Tienda
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(154, 259);
+            this.button2.Location = new System.Drawing.Point(166, 259);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 5;
@@ -99,7 +99,8 @@ namespace Win.Tienda
             // 
             this.pictureBox1.BackgroundImage = global::Win.Tienda.Properties.Resources.WhatsApp_Image_2021_11_04_at_10_38_44_PM;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(86, 24);
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Location = new System.Drawing.Point(84, 30);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(116, 117);
             this.pictureBox1.TabIndex = 6;
@@ -110,7 +111,7 @@ namespace Win.Tienda
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(293, 307);
+            this.ClientSize = new System.Drawing.Size(283, 314);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);

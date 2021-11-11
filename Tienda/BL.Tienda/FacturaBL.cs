@@ -23,7 +23,7 @@ namespace BL.Tienda
         public BindingList<Factura> ObtenerFacturas()
         {
             _contexto.Facturas.Include("FacturaDetalle").Load();
-           ListaFacturas = _contexto.Facturas.Local.ToBindingList();//
+            ListaFacturas = _contexto.Facturas.Local.ToBindingList();//
             return ListaFacturas;
 
         }
@@ -49,6 +49,7 @@ namespace BL.Tienda
             resultado.Exitoso = true;
             return resultado;
         }
+    }
 
         public class Factura
         {
@@ -62,14 +63,13 @@ namespace BL.Tienda
             public double Total { get; set; }
             public bool Activo { get; set; }
 
-            public Factura()
-            {
-                Fecha = DateTime.Now;
-                FacturaDetalle = new BindingList<FacturaDetalle>();
-                Activo = true;
-            }
-
+        public Factura()
+        {
+            var Fecha = DateTime.Now;
+            FacturaDetalle = new BindingList<FacturaDetalle>();
+            Activo = true;
         }
+    }
 
         public class FacturaDetalle
         {
@@ -84,6 +84,6 @@ namespace BL.Tienda
             {
                 Cantidad = 1;
             }
-        }
-    }
-}
+     }
+  }
+
