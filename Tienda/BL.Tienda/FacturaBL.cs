@@ -1,6 +1,11 @@
-﻿using System;
+﻿using BL.Tienda;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.Entity;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace BL.Tienda
 {
@@ -17,16 +22,16 @@ namespace BL.Tienda
 
         public BindingList<Factura> ObtenerFacturas()
         {
-            _contexto.Facturas.Include("FacturasDetalles").Load();
-            ListaFacturas = _contexto.Facturas.Local.ToBindingList();
-
+            _contexto.Facturas.Include("FacturaDetalle").Load();
+           ListaFacturas = _contexto.Facturas.Local.ToBindingList();//
             return ListaFacturas;
+
         }
 
         public void AgregarFactura()
         {
             var nuevaFactura = new Factura();
-            _contexto.Facturas.Add(nuevaFactura);
+            _contexto.Facturas.Add(nuevaFactura);//
         }
 
         public void CancelarCambios()
@@ -38,27 +43,14 @@ namespace BL.Tienda
             }
         }
 
-        public Resultado GuardarFactura(Factura factura)
-        {
-            var resultado = new Validar(factura);
-            if (resultado.Exitoso == false)
-            {
-                return resultado;
-            }
-            _contexto.SaveChanges();
-            resultado.Exitoso = true;
-            return resultado;
-        }
-
-        private Resultado Validar(Factura factura)
+        public Resultado Validar(Factura factura)
         {
             var resultado = new Resultado();
             resultado.Exitoso = true;
             return resultado;
         }
-    }
 
-    public class Factura
+        public class Factura
         {
             public int Id { get; set; }
             public DateTime Fecha { get; set; }
@@ -76,6 +68,7 @@ namespace BL.Tienda
                 FacturaDetalle = new BindingList<FacturaDetalle>();
                 Activo = true;
             }
+
         }
 
         public class FacturaDetalle
@@ -93,4 +86,4 @@ namespace BL.Tienda
             }
         }
     }
-
+}
