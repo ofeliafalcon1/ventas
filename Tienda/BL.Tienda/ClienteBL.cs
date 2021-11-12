@@ -71,9 +71,17 @@ namespace BL.Tienda
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
+            if (cliente == null)
+            {
+                resultado.Mensaje = "Agregue un cliente válido.";
+                resultado.Exitoso = false;
+
+                return resultado;
+            }
+
             if (string.IsNullOrEmpty(cliente.Nombre) == true)
             {
-                resultado.Mensaje = "Ingrese un nombre";
+                resultado.Mensaje = "Ingrese un nombre.";
                 resultado.Exitoso = false;
             }
 

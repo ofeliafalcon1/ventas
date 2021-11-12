@@ -44,13 +44,6 @@ namespace Win.Tienda
                 MessageBox.Show(resultado.Mensaje);
             }
         }
-
-        private void listaClientesbindingNavigatorAddNewItem_Click(object sender, EventArgs e)
-        {
-            _cliente.AgregarCliente();
-            ListaClientesBindingSource.MoveLast();
-            DeshabilitarHabilitarBotones(false);
-        }
         private void DeshabilitarHabilitarBotones(bool valor)
         {
             bindingNavigatorMoveFirstItem.Enabled = valor;

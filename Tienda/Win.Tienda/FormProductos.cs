@@ -165,6 +165,16 @@ namespace Win.Tienda
         {
 
         }
+
+        private void FormProductos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void categoriaIdComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

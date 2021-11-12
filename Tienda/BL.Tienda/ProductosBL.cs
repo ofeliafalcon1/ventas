@@ -68,29 +68,37 @@ namespace BL.Tienda
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
+            if (producto == null)
+            {
+                resultado.Mensaje = "Agregue un producto válido.";
+                resultado.Exitoso = false;
+
+                return resultado;
+            }
+
             if (string.IsNullOrEmpty(producto.Descripcion )== true) 
             {
-                resultado.Mensaje = "Ingrese una descripcion";
+                resultado.Mensaje = "Ingrese una descripcion.";
                 resultado.Exitoso = false;
             }
 
 
             if (producto.Existencia  < 0)
             {
-                resultado.Mensaje = "La existencia debe ser mayor que cero";
+                resultado.Mensaje = "La existencia debe ser mayor que cero.";
                 resultado.Exitoso = false;
             }
 
 
             if (producto.Precio < 0)
             {
-                resultado.Mensaje = "El precio debe ser mayor que cero";
+                resultado.Mensaje = "El precio debe ser mayor que cero.";
                 resultado.Exitoso = false;
             }
 
             if (producto.CategoriaId == 0)
             {
-                resultado.Mensaje = "Seleccione una categoria";
+                resultado.Mensaje = "Seleccione una categoria.";
                 resultado.Exitoso = false;
             }
 
