@@ -25,6 +25,17 @@ namespace BL.Tienda
             return ListaProductos;
         }
 
+        /*Creacion de metodo para el boton cancelar del formulario*/
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
+        }
+
+
         //* Creacion de la funcion para guardar un nuevo producto*//
         public Resultado GuardarProducto(Producto producto)
         {

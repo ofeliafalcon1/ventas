@@ -35,8 +35,8 @@
             System.Windows.Forms.Label precioLabel;
             System.Windows.Forms.Label categoriaIdLabel;
             System.Windows.Forms.Label activoLabel1;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductos));
             System.Windows.Forms.Label tipoIdLabel1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductos));
             this.listaProductosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.listaProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -143,6 +143,15 @@
             activoLabel1.Size = new System.Drawing.Size(40, 13);
             activoLabel1.TabIndex = 18;
             activoLabel1.Text = "Activo:";
+            // 
+            // tipoIdLabel1
+            // 
+            tipoIdLabel1.AutoSize = true;
+            tipoIdLabel1.Location = new System.Drawing.Point(181, 137);
+            tipoIdLabel1.Name = "tipoIdLabel1";
+            tipoIdLabel1.Size = new System.Drawing.Size(31, 13);
+            tipoIdLabel1.TabIndex = 19;
+            tipoIdLabel1.Text = "Tipo:";
             // 
             // listaProductosBindingNavigator
             // 
@@ -407,7 +416,7 @@
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaProductosBindingSource, "Activo", true));
             this.activoCheckBox.Location = new System.Drawing.Point(221, 216);
             this.activoCheckBox.Name = "activoCheckBox";
-            this.activoCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.activoCheckBox.Size = new System.Drawing.Size(24, 24);
             this.activoCheckBox.TabIndex = 19;
             this.activoCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -419,15 +428,6 @@
             // 
             this.listaTiposBindingSource.DataMember = "ListaTipos";
             this.listaTiposBindingSource.DataSource = this.tipoBLBindingSource;
-            // 
-            // tipoIdLabel1
-            // 
-            tipoIdLabel1.AutoSize = true;
-            tipoIdLabel1.Location = new System.Drawing.Point(181, 137);
-            tipoIdLabel1.Name = "tipoIdLabel1";
-            tipoIdLabel1.Size = new System.Drawing.Size(31, 13);
-            tipoIdLabel1.TabIndex = 19;
-            tipoIdLabel1.Text = "Tipo:";
             // 
             // tipoIdComboBox1
             // 

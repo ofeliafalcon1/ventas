@@ -109,7 +109,13 @@ namespace BL.Tienda
                 return resultado;
             }
 
-            if (factura.Activo == false)
+            if (factura.Id != 0 && factura.Activo == true)
+            {
+                resultado.Mensaje = "La factura ya fue emitida y no se pueden realizar cambios en ella.";
+                resultado.Exitoso = false;
+            }
+
+            if(factura.Activo == false)
             {
                 resultado.Mensaje = "La factura está anulada y no se pueden realizar cambios en ella.";
                 resultado.Exitoso = false;

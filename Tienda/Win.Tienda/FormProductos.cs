@@ -121,6 +121,7 @@ namespace Win.Tienda
 
         private void toolStripButtonCancelar_Click(object sender, EventArgs e)
         {
+            _productos.CancelarCambios();
             DesahabilitarHabilitarBotones(true);
 
         }

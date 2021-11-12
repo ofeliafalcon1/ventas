@@ -83,14 +83,6 @@ namespace Win.Tienda
                 MessageBox.Show("Ocurrio un error al eliminar el Cliente");
             }
         }
-        private void toolStripButtonCancelar_Click(object sender, EventArgs e)
-        {
-            
-            _cliente.CancelarCambios();
-            DeshabilitarHabilitarBotones(true);
-        }
-
-        
 
         private void toolStripButtonCancelar_Click_1(object sender, EventArgs e)
         {
