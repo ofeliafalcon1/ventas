@@ -331,7 +331,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::Win.Tienda.Properties.Resources.WhatsApp_Image_2021_11_04_at_10_381;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Location = new System.Drawing.Point(23, 84);
@@ -414,7 +413,8 @@
             // activoCheckBox
             // 
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaProductosBindingSource, "Activo", true));
-            this.activoCheckBox.Location = new System.Drawing.Point(221, 216);
+            this.activoCheckBox.ForeColor = System.Drawing.Color.Fuchsia;
+            this.activoCheckBox.Location = new System.Drawing.Point(221, 211);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(24, 24);
             this.activoCheckBox.TabIndex = 19;

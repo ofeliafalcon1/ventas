@@ -132,7 +132,7 @@ namespace Win.Tienda
             var factura = (Factura)listaFacturasBindingSource.Current;
             _facturaBL.CalcularFactura(factura);
 
-            listaClientesBindingSource.ResetBindings(false);
+            listaFacturasBindingSource.ResetBindings(false);
         }
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
@@ -166,7 +166,7 @@ namespace Win.Tienda
         {
             var factura = (Factura)listaFacturasBindingSource.Current;
 
-            if (factura != null && factura.Id !=0  && factura.Activo == false)
+            if (factura != null && factura.Id != 0  && factura.Activo == false)
             {
                 label1.Visible = true;
             }
