@@ -35,10 +35,10 @@ namespace Win.Tienda
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientes));
             System.Windows.Forms.Label activoLabel;
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label nombreLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientes));
             this.listaClientesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -66,6 +66,33 @@ namespace Win.Tienda
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // activoLabel
+            // 
+            activoLabel.AutoSize = true;
+            activoLabel.Location = new System.Drawing.Point(253, 166);
+            activoLabel.Name = "activoLabel";
+            activoLabel.Size = new System.Drawing.Size(57, 20);
+            activoLabel.TabIndex = 7;
+            activoLabel.Text = "Activo:";
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(253, 96);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(27, 20);
+            idLabel.TabIndex = 9;
+            idLabel.Text = "Id:";
+            // 
+            // nombreLabel
+            // 
+            nombreLabel.AutoSize = true;
+            nombreLabel.Location = new System.Drawing.Point(253, 130);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(66, 20);
+            nombreLabel.TabIndex = 11;
+            nombreLabel.Text = "Nombre:";
             // 
             // listaClientesBindingNavigator
             // 
@@ -220,15 +247,6 @@ namespace Win.Tienda
             // 
             this.listaClientesBindingSource.DataSource = typeof(BL.Tienda.Cliente);
             // 
-            // activoLabel
-            // 
-            activoLabel.AutoSize = true;
-            activoLabel.Location = new System.Drawing.Point(253, 166);
-            activoLabel.Name = "activoLabel";
-            activoLabel.Size = new System.Drawing.Size(57, 20);
-            activoLabel.TabIndex = 7;
-            activoLabel.Text = "Activo:";
-            // 
             // activoCheckBox
             // 
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaClientesBindingSource, "Activo", true));
@@ -238,15 +256,6 @@ namespace Win.Tienda
             this.activoCheckBox.TabIndex = 8;
             this.activoCheckBox.UseVisualStyleBackColor = true;
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(253, 96);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(27, 20);
-            idLabel.TabIndex = 9;
-            idLabel.Text = "Id:";
-            // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Id", true));
@@ -255,15 +264,6 @@ namespace Win.Tienda
             this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(87, 28);
             this.idTextBox.TabIndex = 10;
-            // 
-            // nombreLabel
-            // 
-            nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(253, 130);
-            nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(66, 20);
-            nombreLabel.TabIndex = 11;
-            nombreLabel.Text = "Nombre:";
             // 
             // nombreTextBox
             // 
@@ -277,7 +277,7 @@ namespace Win.Tienda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(595, 265);
             this.Controls.Add(activoLabel);
             this.Controls.Add(this.activoCheckBox);

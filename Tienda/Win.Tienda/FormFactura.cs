@@ -1,4 +1,5 @@
-﻿using BL.Tienda;
+﻿
+using BL.Tienda;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,11 +9,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static BL.Tienda.FacturaBL;
 
-namespace Win.Tienda
+namespace Win.Rentas
 {
-    public partial class FormFactura: Form
+    public partial class FormFactura : Form
     {
         FacturaBL _facturaBL;
         ClienteBL _clientesBL;
@@ -26,35 +26,10 @@ namespace Win.Tienda
             listaFacturasBindingSource.DataSource = _facturaBL.ObtenerFacturas();
 
             _clientesBL = new ClienteBL();
-            listaFacturasBindingSource.DataSource = _clientesBL.ObtenerClientes();
+            listaClientesBindingSource.DataSource = _clientesBL.ObtenerClientes();
 
             _productosBL = new ProductosBL();
-            listaFacturasBindingSource.DataSource = _productosBL.ObtenerProductos();
-        }
-
-        private void subtotalTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void subtotalLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormFactura_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void clienteIdComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void clienteIdLabel_Click(object sender, EventArgs e)
-        {
-
+            listaProductosBindingSource.DataSource = _productosBL.ObtenerProductos();
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
@@ -62,10 +37,10 @@ namespace Win.Tienda
             _facturaBL.AgregarFactura();
             listaFacturasBindingSource.MoveLast();
 
-            DesahabilitarHabilitarBotones(false);
+            DeshabilitarHabilitarBotones(false);
         }
 
-        private void DesahabilitarHabilitarBotones(bool valor)
+        private void DeshabilitarHabilitarBotones(bool valor)
         {
             bindingNavigatorMoveFirstItem.Enabled = valor;
             bindingNavigatorMoveLastItem.Enabled = valor;
@@ -84,12 +59,12 @@ namespace Win.Tienda
 
             var factura = (Factura)listaFacturasBindingSource.Current;
             var resultado = _facturaBL.GuardarFactura(factura);
-            
+
             if (resultado.Exitoso == true)
             {
                 listaFacturasBindingSource.ResetBindings(false);
-                DesahabilitarHabilitarBotones(true);
-                MessageBox.Show("Factura guardada.");
+                DeshabilitarHabilitarBotones(true);
+                MessageBox.Show("Factura Guardada");
             }
             else
             {
@@ -99,16 +74,17 @@ namespace Win.Tienda
 
         private void toolStripButtonCancelar_Click(object sender, EventArgs e)
         {
-            DesahabilitarHabilitarBotones(true);
+            DeshabilitarHabilitarBotones(true);
             _facturaBL.CancelarCambios();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             var factura = (Factura)listaFacturasBindingSource.Current;
-            _facturaBL.AgregarFacturaDetalle(factura);
-            DesahabilitarHabilitarBotones(false);
 
+            _facturaBL.AgregarFacturaDetalle(factura);
+
+            DeshabilitarHabilitarBotones(false);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -118,8 +94,7 @@ namespace Win.Tienda
 
             _facturaBL.RemoverFacturaDetalle(factura, facturaDetalle);
 
-            DesahabilitarHabilitarBotones(false);
-
+            DeshabilitarHabilitarBotones(false);
         }
 
         private void facturaDetalleDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
@@ -139,7 +114,7 @@ namespace Win.Tienda
         {
             if (idTextBox.Text != "")
             {
-                var resultado = MessageBox.Show("¿Desea anular esta factura?", "Anular", MessageBoxButtons.YesNo);
+                var resultado = MessageBox.Show("Desea anular esta factura?", "Anular", MessageBoxButtons.YesNo);
                 if (resultado == DialogResult.Yes)
                 {
                     var id = Convert.ToInt32(idTextBox.Text);
@@ -152,13 +127,13 @@ namespace Win.Tienda
         {
             var resultado = _facturaBL.AnularFactura(id);
 
-            if(resultado == true)
+            if (resultado == true)
             {
                 listaFacturasBindingSource.ResetBindings(false);
             }
             else
             {
-                MessageBox.Show("Ocurrió un error al anular la factura.");
+                MessageBox.Show("Ocurrio un error al anular la factura");
             }
         }
 
@@ -166,7 +141,7 @@ namespace Win.Tienda
         {
             var factura = (Factura)listaFacturasBindingSource.Current;
 
-            if (factura != null && factura.Id != 0  && factura.Activo == false)
+            if (factura != null && factura.Id != 0 && factura.Activo == false)
             {
                 label1.Visible = true;
             }
