@@ -264,6 +264,7 @@ namespace Win.Tienda
             this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(87, 28);
             this.idTextBox.TabIndex = 10;
+            this.idTextBox.TextChanged += new System.EventHandler(this.idTextBox_TextChanged);
             // 
             // nombreTextBox
             // 

@@ -98,6 +98,11 @@ namespace Win.Tienda
             listaClientesBindingSource.MoveLast();
             DeshabilitarHabilitarBotones(false);
         }
+
+        private void idTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
