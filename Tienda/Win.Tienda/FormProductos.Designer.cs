@@ -180,7 +180,7 @@
             this.listaProductosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaProductosBindingNavigator.Name = "listaProductosBindingNavigator";
             this.listaProductosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaProductosBindingNavigator.Size = new System.Drawing.Size(783, 25);
+            this.listaProductosBindingNavigator.Size = new System.Drawing.Size(779, 25);
             this.listaProductosBindingNavigator.TabIndex = 0;
             this.listaProductosBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -416,7 +416,7 @@
             // 
             this.categoriaBLBindingSource.DataSource = typeof(BL.Tienda.CategoriaBL);
             // 
-            // ListatipoBindingSource
+            // listatipoBindingSource
             // 
             this.listatipoBindingSource.DataSource = typeof(BL.Tienda.Tipo);
             // 
@@ -460,7 +460,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(783, 345);
+            this.ClientSize = new System.Drawing.Size(779, 354);
             this.Controls.Add(tipoIdLabel1);
             this.Controls.Add(this.tipoIdComboBox1);
             this.Controls.Add(activoLabel1);
