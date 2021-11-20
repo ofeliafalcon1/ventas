@@ -43,22 +43,43 @@ namespace Win.Tienda
             button1.Text = "Verificando...";
             Application.DoEvents();
 
-            var resultado = _seguridad.Autorizar(usuario, contrasena);
+            var usuarioDB = _seguridad.Autorizar(usuario, contrasena);
 
 
-            if (resultado == true)
+            if ( usuarioDB != null)
             {
+                Program.UsuarioLogueado = usuarioDB;
                 this.Close();
             }
             else
             {
                 MessageBox.Show("Usuario o contraseña incorrecta");
             }
+
+            button1.Enabled = true;
+            button1.Text = "Aceptar";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter) && !string.IsNullOrEmpty(textBox1.Text))
+            {
+                textBox2.Focus();
+            }
+
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == Convert.ToChar(Keys.Enter)&& !string.IsNullOrEmpty(textBox2.Text))
+            {
+                button1.PerformClick();
+            }
         }
     }
 }

@@ -186,7 +186,7 @@
             // 
             // listaProductosBindingSource
             // 
-            this.listaProductosBindingSource.DataSource = typeof(BL.Tienda.Producto);
+       
             // 
             // bindingNavigatorCountItem
             // 
@@ -406,19 +406,17 @@
             // 
             // ListacategoriaBindingSource
             // 
-            this.ListacategoriaBindingSource.DataSource = typeof(BL.Tienda.Categoria);
+        
             // 
             // seguridadBLBindingSource
             // 
-            this.seguridadBLBindingSource.DataSource = typeof(BL.Tienda.SeguridadBL);
+          
             // 
-            // categoriaBLBindingSource
-            // 
-            this.categoriaBLBindingSource.DataSource = typeof(BL.Tienda.CategoriaBL);
+           
             // 
             // listatipoBindingSource
             // 
-            this.listatipoBindingSource.DataSource = typeof(BL.Tienda.Tipo);
+         
             // 
             // activoCheckBox
             // 
@@ -432,12 +430,10 @@
             this.activoCheckBox.UseVisualStyleBackColor = true;
             // 
             // tipoBLBindingSource
-            // 
-            this.tipoBLBindingSource.DataSource = typeof(BL.Tienda.TipoBL);
-            // 
+            //    // 
             // listaTiposBindingSource
             // 
-            this.listaTiposBindingSource.DataMember = "ListaTipos";
+           
             this.listaTiposBindingSource.DataSource = this.tipoBLBindingSource;
             // 
             // tipoIdComboBox1

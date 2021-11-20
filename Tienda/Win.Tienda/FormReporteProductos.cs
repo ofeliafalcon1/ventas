@@ -20,7 +20,7 @@ namespace Win.Tienda
             //*Creacion de variables*//
             var _productoBl = new ProductosBL();
             var bindingSource = new BindingSource();
-            bindingSource.DataSource = _productoBl.ObtenerProductos(); //* Con eso llenamos el bindingsorce*//
+            bindingSource.DataSource = _productoBl.ObtenerProductos(); //* Con eso llenamos el bindingsource*//
 
             var reporte = new ReporteProductos();  //*Creamos un reporte*//
             reporte.SetDataSource(bindingSource);

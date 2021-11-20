@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Data.Entity;
 using System.Linq;
 
@@ -87,6 +88,11 @@ namespace BL.Tienda
             }
 
             return resultado;
+        }
+
+        public object ObtenerClientes(string buscar)
+        {
+            throw new NotImplementedException();
         }
     }
 

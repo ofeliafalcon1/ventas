@@ -158,7 +158,7 @@
             // 
             // listaFacturasBindingSource
             // 
-            this.listaFacturasBindingSource.DataSource = typeof(BL.Tienda.Factura);
+         
             this.listaFacturasBindingSource.CurrentChanged += new System.EventHandler(this.listaFacturasBindingSource_CurrentChanged);
             // 
             // listaFacturasBindingNavigator
@@ -365,11 +365,11 @@
             // 
             // listaClientesBindingSource
             // 
-            this.listaClientesBindingSource.DataSource = typeof(BL.Tienda.Cliente);
+          
             // 
             // listaProductosBindingSource
             // 
-            this.listaProductosBindingSource.DataSource = typeof(BL.Tienda.Producto);
+          
             // 
             // clienteIdComboBox
             // 
@@ -511,7 +511,7 @@
             this.listaFacturasBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facturaDetalleBindingSource)).EndInit();
+          
             ((System.ComponentModel.ISupportInitialize)(this.facturaDetalleDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

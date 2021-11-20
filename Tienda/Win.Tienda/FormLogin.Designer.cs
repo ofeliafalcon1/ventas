@@ -58,6 +58,7 @@ namespace Win.Tienda
             this.textBox1.Size = new System.Drawing.Size(125, 24);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // textBox2
             // 
@@ -67,6 +68,7 @@ namespace Win.Tienda
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(125, 24);
             this.textBox2.TabIndex = 3;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label2
             // 
@@ -104,10 +106,10 @@ namespace Win.Tienda
             this.pictureBox1.BackgroundImage = global::Win.Tienda.Properties.Resources.WhatsApp_Image_2021_11_04_at_10_38_44_PM;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(98, 39);
+            this.pictureBox1.Location = new System.Drawing.Point(96, 44);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(135, 152);
+            this.pictureBox1.Size = new System.Drawing.Size(133, 130);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 

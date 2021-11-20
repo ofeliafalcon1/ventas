@@ -26,7 +26,57 @@ namespace Win.Tienda
         private void Login()
         {
             var formLogin = new FormLogin();
-            formLogin.ShowDialog();//Showdialog es para que el formulario login se quede estatico
+            formLogin.ShowDialog();
+
+            if (Program.UsuarioLogueado != null)
+            {
+                toolStripStatusLabel1.Text = "Usuario: "
+                    + Program.UsuarioLogueado.Nombre;
+
+                if (Program.UsuarioLogueado.TipoUsuario == "Usuarios caja")
+                {
+                    articulosToolStripMenuItem.Visible = false;
+                    clientesToolStripMenuItem.Visible = false;
+                    tiendaToolStripMenuItem.Visible = true;
+                    facturaToolStripMenuItem.Visible = true;
+                    administraciónDeUsuariosToolStripMenuItem.Visible = false;
+                    reporteDeProductosToolStripMenuItem.Visible = false;
+                    reportesDeClientesToolStripMenuItem.Visible = false;
+                    reportesDeVentasToolStripMenuItem.Visible = true;
+                    reporteDeFacturasToolStripMenuItem.Visible = true;
+                }
+
+                if (Program.UsuarioLogueado.TipoUsuario == "Usuarios Ventas")
+                {
+                    articulosToolStripMenuItem.Visible = false;
+                    clientesToolStripMenuItem.Visible = true;
+                    tiendaToolStripMenuItem.Visible = false;
+                    facturaToolStripMenuItem.Visible = false;
+                    administraciónDeUsuariosToolStripMenuItem.Visible = false;
+                    reporteDeProductosToolStripMenuItem.Visible = false;
+                    reportesDeClientesToolStripMenuItem.Visible = true;
+                    reportesDeVentasToolStripMenuItem.Visible = false;
+                    reporteDeFacturasToolStripMenuItem.Visible = false;
+                }
+
+                if (Program.UsuarioLogueado.TipoUsuario == "Administradores")
+                {
+                    articulosToolStripMenuItem.Visible = true;
+                    clientesToolStripMenuItem.Visible = true;
+                    tiendaToolStripMenuItem.Visible = true;
+                    facturaToolStripMenuItem.Visible = true;
+                    administraciónDeUsuariosToolStripMenuItem.Visible = true;
+                    reporteDeProductosToolStripMenuItem.Visible = true;
+                    reportesDeClientesToolStripMenuItem.Visible = true;
+                    reportesDeVentasToolStripMenuItem.Visible = true;
+                    reporteDeFacturasToolStripMenuItem.Visible = true;
+                }
+
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
 
        
@@ -68,6 +118,18 @@ namespace Win.Tienda
             var formReporteFacturas = new formReporteFacturas();
             formReporteFacturas.MdiParent = this;
             formReporteFacturas.Show();
+        }
+
+        private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void administraciónDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new FormUsuarios();
+            form.MdiParent = this;
+            form.Show();
         }
     }
 }
