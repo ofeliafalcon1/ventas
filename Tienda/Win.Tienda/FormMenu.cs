@@ -30,8 +30,7 @@ namespace Win.Tienda
 
             if (Program.UsuarioLogueado != null)
             {
-                toolStripStatusLabel1.Text = "Usuario: "
-                    + Program.UsuarioLogueado.Nombre;
+                toolStripStatusLabel1.Text = "Usuario" + Utilidades.NombreUsuario;
 
                 if (Program.UsuarioLogueado.TipoUsuario == "Usuarios caja")
                 {

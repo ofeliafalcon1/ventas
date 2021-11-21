@@ -43,12 +43,12 @@ namespace Win.Tienda
             button1.Text = "Verificando...";
             Application.DoEvents();
 
-            var usuarioDB = _seguridad.Autorizar(usuario, contrasena);
+            var resultado = _seguridad.Autorizar(usuario, contrasena);
 
 
-            if ( usuarioDB != null)
+            if ( resultado != null)
             {
-                Program.UsuarioLogueado = usuarioDB;
+                Utilidades.NombreUsuario = resultado.Nombre;
                 this.Close();
             }
             else
