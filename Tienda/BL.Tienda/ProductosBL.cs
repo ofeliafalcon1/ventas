@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Data.Entity;
+using System.Linq;
 
 namespace BL.Tienda
 {
@@ -24,6 +25,19 @@ namespace BL.Tienda
 
             return ListaProductos;
         }
+
+        public BindingList<Producto> ObtenerProductos(string buscar)
+        {
+            var query = _contexto.Productos
+                .Where(p => p.Descripcion.ToLower()
+                    .Contains(buscar.ToLower()) == true)
+                        .ToList();
+
+            var resultado = new BindingList<Producto>(query);
+
+            return resultado;
+        }
+
 
         /*Creacion de metodo para el boton cancelar del formulario*/
         public void CancelarCambios()
