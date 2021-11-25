@@ -28,14 +28,11 @@ namespace BL.Tienda
 
         public BindingList<Producto> ObtenerProductos(string buscar)
         {
-            var query = _contexto.Productos
-                .Where(p => p.Descripcion.ToLower()
-                    .Contains(buscar.ToLower()) == true)
-                        .ToList();
+            var resultado = _contexto.Productos.Where(r => r.Descripcion.Contains(buscar));
 
-            var resultado = new BindingList<Producto>(query);
 
-            return resultado;
+            return new BindingList<Producto>(resultado.ToList());
+ 
         }
 
 

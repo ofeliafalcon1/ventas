@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Win.Rentas;
+using Win.Tienda;
 
 namespace Win.Tienda
 {
@@ -27,58 +27,9 @@ namespace Win.Tienda
         {
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
-
-            if (Program.UsuarioLogueado != null)
-            {
-                toolStripStatusLabel1.Text = "Usuario" + Utilidades.NombreUsuario;
-
-                if (Program.UsuarioLogueado.TipoUsuario == "Usuarios caja")
-                {
-                    articulosToolStripMenuItem.Visible = false;
-                    clientesToolStripMenuItem.Visible = false;
-                    tiendaToolStripMenuItem.Visible = true;
-                    facturaToolStripMenuItem.Visible = true;
-                    administraciónDeUsuariosToolStripMenuItem.Visible = false;
-                    reporteDeProductosToolStripMenuItem.Visible = false;
-                    reportesDeClientesToolStripMenuItem.Visible = false;
-                    reportesDeVentasToolStripMenuItem.Visible = true;
-                    reporteDeFacturasToolStripMenuItem.Visible = true;
-                }
-
-                if (Program.UsuarioLogueado.TipoUsuario == "Usuarios Ventas")
-                {
-                    articulosToolStripMenuItem.Visible = false;
-                    clientesToolStripMenuItem.Visible = true;
-                    tiendaToolStripMenuItem.Visible = false;
-                    facturaToolStripMenuItem.Visible = false;
-                    administraciónDeUsuariosToolStripMenuItem.Visible = false;
-                    reporteDeProductosToolStripMenuItem.Visible = false;
-                    reportesDeClientesToolStripMenuItem.Visible = true;
-                    reportesDeVentasToolStripMenuItem.Visible = false;
-                    reporteDeFacturasToolStripMenuItem.Visible = false;
-                }
-
-                if (Program.UsuarioLogueado.TipoUsuario == "Administradores")
-                {
-                    articulosToolStripMenuItem.Visible = true;
-                    clientesToolStripMenuItem.Visible = true;
-                    tiendaToolStripMenuItem.Visible = true;
-                    facturaToolStripMenuItem.Visible = true;
-                    administraciónDeUsuariosToolStripMenuItem.Visible = true;
-                    reporteDeProductosToolStripMenuItem.Visible = true;
-                    reportesDeClientesToolStripMenuItem.Visible = true;
-                    reportesDeVentasToolStripMenuItem.Visible = true;
-                    reporteDeFacturasToolStripMenuItem.Visible = true;
-                }
-
-            }
-            else
-            {
-                Application.Exit();
-            }
+            toolStripStatusLabel1.Text = "Usuario" + Utilidades.NombreUsuario;
         }
 
-       
         private void FormMenu_Load(object sender, EventArgs e)
         {
             Login();

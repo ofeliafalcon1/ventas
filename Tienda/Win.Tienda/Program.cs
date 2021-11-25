@@ -11,7 +11,6 @@ namespace Win.Tienda
 {
     static class Program
     {
-        public static Usuario UsuarioLogueado;
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>

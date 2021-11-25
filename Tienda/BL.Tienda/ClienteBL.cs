@@ -24,6 +24,18 @@ namespace BL.Tienda
             return ListaClientes;
         }
 
+        public BindingList<Cliente> ObtenerClientes(string buscar)
+        {
+            var query = _contexto.Clientes
+                .Where(p => p.Nombre.ToLower()
+                    .Contains(buscar.ToLower()) == true)
+                        .ToList();
+
+            var resultado = new BindingList<Cliente>(query);
+
+            return resultado;
+        }
+
 
         public void CancelarCambios()
         {
@@ -89,12 +101,8 @@ namespace BL.Tienda
 
             return resultado;
         }
-
-        public object ObtenerClientes(string buscar)
-        {
-            throw new NotImplementedException();
-        }
     }
+
 
     public class Cliente
     {

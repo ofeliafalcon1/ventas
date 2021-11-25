@@ -1,5 +1,4 @@
 ﻿using System.Data.Entity;
-using System.IO;
 
 namespace BL.Tienda
 {
@@ -11,7 +10,6 @@ namespace BL.Tienda
              var usuarioAdmin1 = new Usuario();
              usuarioAdmin1.Nombre = "admin1";
              usuarioAdmin1.Contrasena = "123";
-             usuarioAdmin1.TipoUsuario = "Administradores";
 
             contexto.Usuarios.Add(usuarioAdmin1);
 
@@ -49,25 +47,6 @@ namespace BL.Tienda
             var tipo4 = new Tipo();
             tipo4.Descripcion = "Blusas";
             contexto.Tipos.Add(tipo4);
-
-
-            var archivo = "../../../clientes.csv";
-            using (var reader = new StreamReader(archivo))
-            {
-                reader.ReadLine(); // Lee primera fila de encabezados
-
-                while (!reader.EndOfStream)
-                {
-                    var linea = reader.ReadLine();
-                    var valores = linea.Split(',');
-
-                    var clienteNuevo = new Cliente();
-                    clienteNuevo.Nombre = valores[0].ToString();
-                    clienteNuevo.Activo = bool.Parse(valores[1].ToString());
-
-                    contexto.Clientes.Add(clienteNuevo);
-                }
-            }
 
             base.Seed(contexto);
     }

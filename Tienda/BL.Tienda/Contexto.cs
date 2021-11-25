@@ -7,14 +7,12 @@ namespace BL.Tienda
     //*Creacion de la lase contexto *//
     public class Contexto : DbContext
     {
-        public Contexto() : base(@"Data Source=(LocalDb)\MSSQLLocalDB;AttachDBFilename=" +
-              Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Camisetas.mdf")
+        public Contexto() : base("Ropa")
         {
 
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("Camisetas");
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();  //* Instruccion para remover la pluralizacion de las tablas*//
             Database.SetInitializer(new DatosdeInicio()); //Agrega datos de inicio a la base de datos despues de eliminarla
         }
