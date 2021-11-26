@@ -99,6 +99,7 @@ namespace Win.Tienda
             // listaClientesBindingNavigator
             // 
             this.listaClientesBindingNavigator.AddNewItem = null;
+            this.listaClientesBindingNavigator.BindingSource = this.listaClientesBindingSource;
             this.listaClientesBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.listaClientesBindingNavigator.DeleteItem = null;
             this.listaClientesBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -123,7 +124,7 @@ namespace Win.Tienda
             this.listaClientesBindingNavigator.Name = "listaClientesBindingNavigator";
             this.listaClientesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
             this.listaClientesBindingNavigator.Size = new System.Drawing.Size(595, 25);
-            this.listaClientesBindingNavigator.TabIndex = 1;
+            this.listaClientesBindingNavigator.TabIndex = 0;
             this.listaClientesBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorCountItem

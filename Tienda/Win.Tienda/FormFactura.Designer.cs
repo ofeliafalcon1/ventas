@@ -495,6 +495,7 @@
             this.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormFactura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Factura";
             ((System.ComponentModel.ISupportInitialize)(this.listaFacturasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaFacturasBindingNavigator)).EndInit();
@@ -502,7 +503,6 @@
             this.listaFacturasBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facturaDetalleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.facturaDetalleDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

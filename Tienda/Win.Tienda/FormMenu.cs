@@ -27,8 +27,8 @@ namespace Win.Tienda
         {
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
-            toolStripStatusLabel1.Text = "Usuario" + Utilidades.NombreUsuario;
-        }
+            toolStripStatusLabel1.Text = "Usuario: " + Utilidades.NombreUsuario;
+}
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
@@ -70,16 +70,14 @@ namespace Win.Tienda
             formReporteFacturas.Show();
         }
 
-        private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tiendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void administraciónDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            var form = new FormUsuarios();
-            form.MdiParent = this;
-            form.Show();
+            Application.Exit();
         }
     }
 }
