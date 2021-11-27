@@ -89,70 +89,77 @@
             // activoLabel
             // 
             activoLabel.AutoSize = true;
-            activoLabel.Location = new System.Drawing.Point(278, 63);
-            activoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            activoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            activoLabel.Location = new System.Drawing.Point(348, 77);
+            activoLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             activoLabel.Name = "activoLabel";
-            activoLabel.Size = new System.Drawing.Size(51, 18);
+            activoLabel.Size = new System.Drawing.Size(62, 22);
             activoLabel.TabIndex = 1;
             activoLabel.Text = "Activo:";
             // 
             // clienteIdLabel
             // 
             clienteIdLabel.AutoSize = true;
-            clienteIdLabel.Location = new System.Drawing.Point(30, 140);
-            clienteIdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            clienteIdLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            clienteIdLabel.Location = new System.Drawing.Point(38, 171);
+            clienteIdLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             clienteIdLabel.Name = "clienteIdLabel";
-            clienteIdLabel.Size = new System.Drawing.Size(55, 18);
+            clienteIdLabel.Size = new System.Drawing.Size(68, 22);
             clienteIdLabel.TabIndex = 3;
             clienteIdLabel.Text = "Cliente:";
             // 
             // fechaLabel
             // 
             fechaLabel.AutoSize = true;
-            fechaLabel.Location = new System.Drawing.Point(30, 101);
-            fechaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            fechaLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            fechaLabel.Location = new System.Drawing.Point(38, 123);
+            fechaLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             fechaLabel.Name = "fechaLabel";
-            fechaLabel.Size = new System.Drawing.Size(48, 18);
+            fechaLabel.Size = new System.Drawing.Size(56, 22);
             fechaLabel.TabIndex = 5;
             fechaLabel.Text = "Fecha:";
             // 
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(30, 63);
-            idLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            idLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            idLabel.Location = new System.Drawing.Point(38, 77);
+            idLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(25, 18);
+            idLabel.Size = new System.Drawing.Size(30, 22);
             idLabel.TabIndex = 7;
             idLabel.Text = "Id:";
             // 
             // impuestoLabel
             // 
             impuestoLabel.AutoSize = true;
-            impuestoLabel.Location = new System.Drawing.Point(398, 603);
-            impuestoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            impuestoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            impuestoLabel.Location = new System.Drawing.Point(498, 737);
+            impuestoLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             impuestoLabel.Name = "impuestoLabel";
-            impuestoLabel.Size = new System.Drawing.Size(70, 18);
+            impuestoLabel.Size = new System.Drawing.Size(85, 22);
             impuestoLabel.TabIndex = 9;
             impuestoLabel.Text = "Impuesto:";
             // 
             // subtotalLabel
             // 
             subtotalLabel.AutoSize = true;
-            subtotalLabel.Location = new System.Drawing.Point(398, 567);
-            subtotalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            subtotalLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            subtotalLabel.Location = new System.Drawing.Point(498, 693);
+            subtotalLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             subtotalLabel.Name = "subtotalLabel";
-            subtotalLabel.Size = new System.Drawing.Size(63, 18);
+            subtotalLabel.Size = new System.Drawing.Size(78, 22);
             subtotalLabel.TabIndex = 11;
             subtotalLabel.Text = "Subtotal:";
             // 
             // totalLabel
             // 
             totalLabel.AutoSize = true;
-            totalLabel.Location = new System.Drawing.Point(398, 639);
-            totalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            totalLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            totalLabel.Location = new System.Drawing.Point(498, 781);
+            totalLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             totalLabel.Name = "totalLabel";
-            totalLabel.Size = new System.Drawing.Size(44, 18);
+            totalLabel.Size = new System.Drawing.Size(53, 22);
             totalLabel.TabIndex = 13;
             totalLabel.Text = "Total:";
             // 
@@ -163,9 +170,11 @@
             // listaFacturasBindingNavigator
             // 
             this.listaFacturasBindingNavigator.AddNewItem = null;
+            this.listaFacturasBindingNavigator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("listaFacturasBindingNavigator.BackgroundImage")));
             this.listaFacturasBindingNavigator.BindingSource = this.listaFacturasBindingSource;
             this.listaFacturasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.listaFacturasBindingNavigator.DeleteItem = null;
+            this.listaFacturasBindingNavigator.ImageScalingSize = new System.Drawing.Size(16, 18);
             this.listaFacturasBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -188,7 +197,7 @@
             this.listaFacturasBindingNavigator.Name = "listaFacturasBindingNavigator";
             this.listaFacturasBindingNavigator.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.listaFacturasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaFacturasBindingNavigator.Size = new System.Drawing.Size(782, 25);
+            this.listaFacturasBindingNavigator.Size = new System.Drawing.Size(978, 25);
             this.listaFacturasBindingNavigator.TabIndex = 0;
             this.listaFacturasBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -227,7 +236,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Posición";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(66, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(82, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             // 
@@ -290,6 +299,7 @@
             // 
             // toolStripButtonCancelar
             // 
+            this.toolStripButtonCancelar.BackColor = System.Drawing.Color.White;
             this.toolStripButtonCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripButtonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonCancelar.Image")));
             this.toolStripButtonCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -303,76 +313,77 @@
             // 
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaFacturasBindingSource, "Activo", true));
             this.activoCheckBox.Enabled = false;
-            this.activoCheckBox.Location = new System.Drawing.Point(358, 56);
-            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(4);
+            this.activoCheckBox.Location = new System.Drawing.Point(448, 68);
+            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.activoCheckBox.Name = "activoCheckBox";
-            this.activoCheckBox.Size = new System.Drawing.Size(30, 33);
+            this.activoCheckBox.Size = new System.Drawing.Size(38, 40);
             this.activoCheckBox.TabIndex = 2;
             this.activoCheckBox.UseVisualStyleBackColor = true;
             // 
             // fechaDateTimePicker
             // 
             this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.listaFacturasBindingSource, "Fecha", true));
-            this.fechaDateTimePicker.Location = new System.Drawing.Point(110, 95);
-            this.fechaDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
+            this.fechaDateTimePicker.Location = new System.Drawing.Point(138, 116);
+            this.fechaDateTimePicker.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.fechaDateTimePicker.Name = "fechaDateTimePicker";
-            this.fechaDateTimePicker.Size = new System.Drawing.Size(266, 25);
+            this.fechaDateTimePicker.Size = new System.Drawing.Size(332, 29);
             this.fechaDateTimePicker.TabIndex = 6;
             // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Id", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "00000"));
-            this.idTextBox.Location = new System.Drawing.Point(110, 58);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.idTextBox.Location = new System.Drawing.Point(138, 71);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
-            this.idTextBox.Size = new System.Drawing.Size(98, 25);
+            this.idTextBox.Size = new System.Drawing.Size(122, 29);
             this.idTextBox.TabIndex = 8;
             // 
             // impuestoTextBox
             // 
             this.impuestoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Impuesto", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-            this.impuestoTextBox.Location = new System.Drawing.Point(478, 599);
-            this.impuestoTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.impuestoTextBox.Location = new System.Drawing.Point(598, 732);
+            this.impuestoTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.impuestoTextBox.Name = "impuestoTextBox";
             this.impuestoTextBox.ReadOnly = true;
-            this.impuestoTextBox.Size = new System.Drawing.Size(266, 25);
+            this.impuestoTextBox.Size = new System.Drawing.Size(332, 29);
             this.impuestoTextBox.TabIndex = 10;
             this.impuestoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // subtotalTextBox
             // 
             this.subtotalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Subtotal", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-            this.subtotalTextBox.Location = new System.Drawing.Point(478, 563);
-            this.subtotalTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.subtotalTextBox.Location = new System.Drawing.Point(598, 688);
+            this.subtotalTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.subtotalTextBox.Name = "subtotalTextBox";
             this.subtotalTextBox.ReadOnly = true;
-            this.subtotalTextBox.Size = new System.Drawing.Size(266, 25);
+            this.subtotalTextBox.Size = new System.Drawing.Size(332, 29);
             this.subtotalTextBox.TabIndex = 12;
             this.subtotalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // totalTextBox
             // 
             this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Total", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-            this.totalTextBox.Location = new System.Drawing.Point(478, 635);
-            this.totalTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.totalTextBox.Location = new System.Drawing.Point(598, 776);
+            this.totalTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.totalTextBox.Name = "totalTextBox";
             this.totalTextBox.ReadOnly = true;
-            this.totalTextBox.Size = new System.Drawing.Size(266, 25);
+            this.totalTextBox.Size = new System.Drawing.Size(332, 29);
             this.totalTextBox.TabIndex = 14;
             this.totalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // clienteIdComboBox
             // 
+            this.clienteIdComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.clienteIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaFacturasBindingSource, "ClienteId", true));
             this.clienteIdComboBox.DataSource = this.listaClientesBindingSource;
             this.clienteIdComboBox.DisplayMember = "Nombre";
             this.clienteIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.clienteIdComboBox.FormattingEnabled = true;
-            this.clienteIdComboBox.Location = new System.Drawing.Point(110, 135);
-            this.clienteIdComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.clienteIdComboBox.Location = new System.Drawing.Point(138, 165);
+            this.clienteIdComboBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.clienteIdComboBox.Name = "clienteIdComboBox";
-            this.clienteIdComboBox.Size = new System.Drawing.Size(266, 26);
+            this.clienteIdComboBox.Size = new System.Drawing.Size(332, 30);
             this.clienteIdComboBox.TabIndex = 15;
             this.clienteIdComboBox.ValueMember = "Id";
             // 
@@ -385,6 +396,9 @@
             // facturaDetalleDataGridView
             // 
             this.facturaDetalleDataGridView.AutoGenerateColumns = false;
+            this.facturaDetalleDataGridView.BackgroundColor = System.Drawing.Color.Teal;
+            this.facturaDetalleDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.facturaDetalleDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.facturaDetalleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.facturaDetalleDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
@@ -392,10 +406,11 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.facturaDetalleDataGridView.DataSource = this.facturaDetalleBindingSource;
-            this.facturaDetalleDataGridView.Location = new System.Drawing.Point(32, 214);
-            this.facturaDetalleDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.facturaDetalleDataGridView.GridColor = System.Drawing.SystemColors.ButtonFace;
+            this.facturaDetalleDataGridView.Location = new System.Drawing.Point(40, 262);
+            this.facturaDetalleDataGridView.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.facturaDetalleDataGridView.Name = "facturaDetalleDataGridView";
-            this.facturaDetalleDataGridView.Size = new System.Drawing.Size(710, 320);
+            this.facturaDetalleDataGridView.Size = new System.Drawing.Size(888, 391);
             this.facturaDetalleDataGridView.TabIndex = 15;
             this.facturaDetalleDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.facturaDetalleDataGridView_CellEndEdit);
             this.facturaDetalleDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.facturaDetalleDataGridView_DataError);
@@ -430,49 +445,57 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 5;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(586, 166);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.Location = new System.Drawing.Point(732, 203);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 40);
+            this.button1.Size = new System.Drawing.Size(92, 49);
             this.button1.TabIndex = 16;
             this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 5;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(668, 166);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button2.Location = new System.Drawing.Point(835, 203);
+            this.button2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(74, 40);
+            this.button2.Size = new System.Drawing.Size(92, 49);
             this.button2.TabIndex = 17;
             this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(600, 38);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(761, 66);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 28);
+            this.label1.Size = new System.Drawing.Size(147, 32);
             this.label1.TabIndex = 18;
             this.label1.Text = "ANULADO";
             this.label1.Visible = false;
             // 
             // FormFactura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Thistle;
-            this.ClientSize = new System.Drawing.Size(782, 689);
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.ClientSize = new System.Drawing.Size(978, 842);
             this.Controls.Add(this.facturaDetalleDataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
@@ -492,8 +515,9 @@
             this.Controls.Add(totalLabel);
             this.Controls.Add(this.totalTextBox);
             this.Controls.Add(this.listaFacturasBindingNavigator);
-            this.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "FormFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Factura";
