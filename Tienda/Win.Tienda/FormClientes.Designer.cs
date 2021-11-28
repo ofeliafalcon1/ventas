@@ -68,6 +68,7 @@ namespace Win.Tienda
             this.listaClientesBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // activoLabel
@@ -247,10 +248,10 @@ namespace Win.Tienda
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::Win.Tienda.Properties.Resources.WhatsApp_Image_2021_11_04_at_10_38_44_PM;
-            this.pictureBox1.Location = new System.Drawing.Point(37, 64);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(18, 19);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(248, 234);
+            this.pictureBox1.Size = new System.Drawing.Size(234, 221);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -260,7 +261,7 @@ namespace Win.Tienda
             this.activoCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaClientesBindingSource, "Activo", true));
             this.activoCheckBox.Location = new System.Drawing.Point(431, 242);
-            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(32, 30);
             this.activoCheckBox.TabIndex = 8;
@@ -270,7 +271,7 @@ namespace Win.Tienda
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Id", true));
             this.idTextBox.Location = new System.Drawing.Point(431, 152);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(115, 33);
@@ -281,7 +282,7 @@ namespace Win.Tienda
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Nombre", true));
             this.nombreTextBox.Location = new System.Drawing.Point(431, 195);
-            this.nombreTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nombreTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(323, 33);
             this.nombreTextBox.TabIndex = 12;
@@ -289,7 +290,7 @@ namespace Win.Tienda
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(431, 59);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(210, 33);
             this.textBox1.TabIndex = 13;
@@ -301,7 +302,7 @@ namespace Win.Tienda
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Teal;
             this.button1.Location = new System.Drawing.Point(649, 53);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 42);
             this.button1.TabIndex = 14;
@@ -312,6 +313,7 @@ namespace Win.Tienda
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(25, 53);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(271, 258);
@@ -332,12 +334,11 @@ namespace Win.Tienda
             this.Controls.Add(this.idTextBox);
             this.Controls.Add(nombreLabel);
             this.Controls.Add(this.nombreTextBox);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.listaClientesBindingNavigator);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormClientes";
@@ -348,6 +349,7 @@ namespace Win.Tienda
             this.listaClientesBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
